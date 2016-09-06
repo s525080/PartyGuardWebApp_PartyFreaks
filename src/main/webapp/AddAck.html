@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!--  <meta http-equiv="x-ua-compatible" content="ie=edge">  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+<link href="css/simple-sidebar.css" rel="stylesheet">
+</head>
+
+<body>
+    
+  
+
+  <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-dark orange">
+
+        <!-- Collapse button-->
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="container">
+
+            <!--Collapse content-->
+            <div class="collapse navbar-toggleable-xs" id="collapseEx2">
+                <!--Navbar Brand-->
+                <a class="navbar-brand" href="index.html">PartyGuard</a>
+                <!--Links-->
+               
+                   
+                 
+                   
+                </ul>
+                <!--Search form-->
+<!--                <form class="form-inline">
+                    <input class="form-control" type="text" placeholder="Search">
+                   
+                   <a class="navbar-brand" href="Hostprofile.html">Sign In</a>
+                </form>-->
+            
+            </div>
+           
+            <!--/.Collapse content-->
+
+        </div>
+
+    </nav>
+    <!--/.Navbar-->
+</header>
+
+
+<!--Carousel Wrapper-->
+<main>
+ <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav ">
+                <li class="sidebar-brand">
+                    <a href="addCustomer.html">
+                        Add Customer
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="#">View Customers</a>
+                </li>
+                <li>
+                    <a href="#">Manage Subscriptions </a>
+                </li>
+               
+            
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+             <div class="row">
+                   <div class="col-md-12"> 
+                       <h1>Add Customer</h1>
+                   </div>
+             </div>
+                <div class="col-md-12">
+                     <table class="table">
+                            <tr>
+                                <td><b>University</b></td>
+                                <td>Northwest Missouri State University</td>
+                            </tr>
+                            <tr>
+                                <td><b>House Name</b></td>
+                                <td>Sigma Phi Epsilon</td>
+                            </tr>
+                            <tr>
+                                <td><b>House Nickname</b></td>
+                                <td>SigEp</td>
+                            </tr>
+                            <tr>
+                                <td><b>House Location</b></td>
+                                <td> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.8256802709057!2d-94.87993638506894!3d40.35340616741314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87eac54386ebbed5%3A0x914b276f4623ad9b!2s509+W+9th+St%2C+Maryville%2C+MO+64468!5e0!3m2!1sen!2sus!4v1468801815724" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+                            </tr>
+                            <tr>
+                                <td><b>Chapter</b></td>
+                                <td>Missouri Lambda</td>
+                            </tr>
+                            <tr>
+                                <td><b>UserName</b></td>
+                                <td>SigEpMoLambda</td>
+                            </tr>
+                            <tr>
+                                <td><b>Temp Pass</b></td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td><b>Customer ID</b></td>
+                                <td>000000001</td>
+                            </tr>
+                            <tr>
+                                <td><b>Subscription Code</b></td>
+                                <td>123-456-789</td>
+                            </tr>
+                     </table>
+                    <a href="#" class="btn btn-warning">Send Information</a>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+</main>
+
+
+
+
+    <!-- /Start your project here-->
+    
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script>
+  $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+     $("#menu-toggle-2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled-2");
+        $('#menu ul').hide();
+    });
+
+     function initMenu() {
+      $('#menu ul').hide();
+      $('#menu ul').children('.current').parent().show();
+      //$('#menu ul:first').show();
+      $('#menu li a').click(
+        function() {
+          var checkElement = $(this).next();
+          if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+            return false;
+            }
+          if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+            $('#menu ul:visible').slideUp('normal');
+            checkElement.slideDown('normal');
+            return false;
+            }
+          }
+        );
+      }
+    $(document).ready(function() {initMenu();});
+</script>
+</body>
+</html>
