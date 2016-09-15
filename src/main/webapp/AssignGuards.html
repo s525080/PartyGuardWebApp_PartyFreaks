@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ui.bootstrap.demo">
 
 <head>
     
@@ -8,7 +8,7 @@
    <!--  <meta http-equiv="x-ua-compatible" content="ie=edge">  -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
-    <title>Material Design Bootstrap</title>
+    <title>Assign Guards</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -85,17 +85,32 @@
                 <!--Navbar Brand-->
                 <a class="navbar-brand" href="index.html">PartyGuard</a>
                 <!--Links-->
-               
+                  <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
                  
                    
                 </ul>
                 <!--Search form-->
-<!--                <form class="form-inline">
-                    <input class="form-control" type="text" placeholder="Search">
+                <form class="form-inline">
+<!--                    <input class="form-control" type="text" placeholder="Search">-->
                    
-                   <a class="navbar-brand" href="Hostprofile.html">Sign In</a>
-                </form>-->
+                   <a class="navbar-brand" href="MainLogin.html">Logout</a>
+                </form>
             
             </div>
            
@@ -125,7 +140,7 @@
                     <a href="Host Location.html">House Location</a>
                 </li>
                 <li class="sidebar-brand">
-                    <a href="Guardteam.html">Party Guard Team </a>
+                    <a href="AssignGuards.html">Assign Guards </a>
                 </li>
                 <li>
                     <a href="Members.html">Members</a>
@@ -141,6 +156,31 @@
                 <div class="row">
                     <div class="col-md-12"> 
                        <h1>PartyGuard Team</h1>
+                   </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4"> 
+                      <div class="md-form">
+                    <i class="fa fa-beer prefix"></i>
+                    <input type="text" id="form2" class="form-control">
+                    <label for="form2">Event Name</label>                   
+                    </div> 
+                   </div>
+                    <div class="col-md-4"> 
+                      <div class="md-form">
+                    <i class="fa fa-calendar prefix"></i>
+                    <input type="text" id="form2" class="form-control" >
+                    <label for="form2">Event Date</label> 
+                 
+                    </div> 
+                   </div>
+                   
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12"> 
+                       
                    </div>
                     <div class="col-lg-12">
                    <table class="table table-striped">
@@ -171,7 +211,7 @@
                                 <td><b>Spandana</b></td>
                                 <td><b>Velaga</b></td>
                                 <td><fieldset class="form-group">
-                                <input name="group1" type="radio" id="radio1">                                
+                                <input name="group2" type="radio" id="radio1">                                
                                  </fieldset>
                                        </td>
                             </tr>
@@ -180,7 +220,7 @@
                                 <td><b>Parise</b></td>
                                 <td><b>Abishai</b></td>
                                 <td><fieldset class="form-group">
-                                <input name="group1" type="radio" id="radio1">                                
+                                <input name="group3" type="radio" id="radio1">                                
                                  </fieldset>
                                        </td>
                             </tr>
@@ -189,7 +229,7 @@
                                 <td><b>Spandana</b></td>
                                 <td><b>Velaga</b></td>
                                 <td><fieldset class="form-group">
-                                <input name="group1" type="radio" id="radio1">                                
+                                <input name="group4" type="radio" id="radio1">                                
                                  </fieldset>
                                        </td>
                             </tr>
@@ -198,7 +238,7 @@
                                 <td><b>Parise</b></td>
                                 <td><b>Abishai</b></td>
                                 <td><fieldset class="form-group">
-                                <input name="group1" type="radio" id="radio1">                                
+                                <input name="group5" type="radio" id="radio1">                                
                                  </fieldset>
                                        </td>
                             </tr>
@@ -207,7 +247,7 @@
                                 <td><b>Spandana</b></td>
                                 <td><b>Velaga</b></td>
                                 <td><fieldset class="form-group">
-                                <input name="group1" type="radio" id="radio1">                                
+                                <input name="group5" type="radio" id="radio1">                                
                                  </fieldset>
                                        </td>
                             </tr>
@@ -216,7 +256,7 @@
                                 <td><b>Parise</b></td>
                                 <td><b>Abishai</b></td>
                                 <td><fieldset class="form-group">
-                                <input name="group1" type="radio" id="radio1">                                
+                                <input name="group7" type="radio" id="radio1">                                
                                  </fieldset>
                                        </td>
                             </tr>
@@ -231,6 +271,7 @@
                             </tr>
                             </tbody>
                    </table>
+                        <a href="#" class="btn btn-warning">Save</a>
                     </div>
                 </div>
             </div>
@@ -248,6 +289,7 @@
     
 
     <!-- SCRIPTS -->
+ 
 
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
@@ -260,6 +302,10 @@
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+       <script src="helper.js"></script>
   <script>
   $("#menu-toggle").click(function(e) {
         e.preventDefault();
