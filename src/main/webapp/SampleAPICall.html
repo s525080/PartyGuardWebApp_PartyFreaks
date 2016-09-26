@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!--  <meta http-equiv="x-ua-compatible" content="ie=edge">  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <title>API Call Check</title>
+</head>
+
+<body>
+    <h2>Sample Call to API: User Info</h2>
+    
+        <button>get data</button>
+            <script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("http://partyguardservices20160912122440.azurewebsites.net/api/Account/Userinfo", function(result){
+           alert("Data Loaded: " + result.HasRegistered);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
